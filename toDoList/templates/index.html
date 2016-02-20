@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="todolist not-done">
+             <h1>Todos</h1>
+
+             {% for x in items %}
+            
+                <ul id="sortable" class="list-unstyled">
+                    <li class="ui-state-default">
+                         <div class="checkbox">
+                            <label><input type="checkbox" value={{ x.completionStatus }}/> {{ x.taskItem }} - {{ x.dueDate|date:"D d M Y" }}</label>
+                        </div>
+                    </li>
+                </ul>
+            {% endfor %}   
+                                                                        
